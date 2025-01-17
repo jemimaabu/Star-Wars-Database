@@ -46,7 +46,7 @@ const App: React.FC = () => {
 
           <footer>
             <p>
-              Built by <a href='https://www.jemimaabu.com' target='_blank'>Jemima Abu </a> {(new Date().getFullYear())}
+              © designed &amp; built by <a href="https://www.jemimaabu.com" target="_blank">Jemima Abu</a> <span className="heart">♥</span>
               <br />
               <small>Star Wars&copy; data from <a href="https://swapi.dev/">SWAPI</a> </small>
             </p>
