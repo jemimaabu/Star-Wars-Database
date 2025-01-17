@@ -1,0 +1,120 @@
+#root {
+  width: 100%;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.nav-logo {
+  width: 120px; 
+  height: auto; 
+  transition: filter 300ms;
+  will-change: filter;
+}
+
+.nav-logo:hover {
+  filter: drop-shadow(0 0 2em var(--logo-hover-color));
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; 
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 18px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.nav-links a.active {
+  border-bottom: 1px solid;
+}
+
+.nav-links a:not(.active):hover {
+  color: var(--link-hover-color);
+}
+
+main {
+  background: linear-gradient(180deg, var(--background-color), var(--background-accent), var(--background-color));
+  min-height: 100vh;
+}
+
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.character-list__item {
+  display: block;
+  flex: 1 0 100%;
+  background-color: var(--background-accent);
+  border: 1px solid var(--background-color);
+  border-radius: 1rem;
+  text-align: left;
+}
+
+.character-list__item:has(a):hover {
+  box-shadow: 0 0 1rem 0.5rem var(--background-color);
+}
+
+.character-list__item:not(:has(:hover, :focus)) .see-more {
+  opacity: 0;
+}
+
+.character-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.character-name {
+  font-size: 1.2rem;
+  display: block;
+  margin-block-end: 0.2rem;
+  color: var(--text-color);
+}
+
+.character-attributes {
+  display: flex;
+  gap: 0.5rem;
+  color: var(--text-color);
+}
+
+.character-attribute:not(:last-of-type)::after {
+  content: '\00B7';
+  margin-left: 0.5rem;
+}
+
+.pagination-container {
+  display: flex;
+  gap: 1rem;
+  place-content: center;
+}
+
+footer {
+  text-align: center;
+  background: var(--background-color);
+  color: var(--text-color);
+}
