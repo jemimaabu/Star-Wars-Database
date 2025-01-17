@@ -13,7 +13,6 @@ export const FavouritesProvider: React.FC<{ children: ReactNode }> = ({ children
   const [favourites, setFavourites] = useState<Character[]>([]);
 
   useEffect(() => {
-    console.log('page load', favourites);
     const localFavourites = localStorage.getItem('favourites');
 
     if (localFavourites) {
@@ -21,15 +20,10 @@ export const FavouritesProvider: React.FC<{ children: ReactNode }> = ({ children
     }
   }, []);
 
-
-  // useEffect(() => {
-  //   console.log('favourites', favourites);
-  // }, [favourites]);
-
   const addToFavourites = (character: Character) => {
     const updatedFavourites = [...favourites, character];
     localStorage.setItem('favourites', JSON.stringify(updatedFavourites));
-    
+
     setFavourites((prevFavourites) => [...prevFavourites, character]);
   };
 

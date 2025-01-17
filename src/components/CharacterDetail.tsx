@@ -73,6 +73,10 @@ const CharacterDetail: React.FC = () => {
       <button onClick={() => (isFavourite ? removeFromFavourites(character) : addToFavourites({...character, homeworld: homePlanet}))}>
         {isFavourite ? 'Remove from Favourites' : 'Add to Favourites'}
       </button>
+      {
+        //TODO: Add feature to change character height or gender
+        // Will need to take into account fake db (local storage) and match updated character with API data
+      }
     </>
   );
 };
