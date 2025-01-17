@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchCharacters, fetchHomePlanet } from '../services/swapi';
 import { Character } from '../types'; 
+import { genderFontColor } from '../utils/utils'; 
 import '../styles/CharacterList.css';
 
 const CharacterList: React.FC = () => {
@@ -50,19 +51,6 @@ const CharacterList: React.FC = () => {
     setSearch(e.target.value);
     setPage(1);
   };
-
-  const genderFontColor = (gender: string): React.CSSProperties => {
-    switch (gender) { 
-      case 'male':  
-        return { color: 'blue' };
-      
-      case 'female':
-        return { color: 'pink' };
-
-      default:
-        return { color: 'green' };
-    }
-  }
 
   return (
     <>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useFavourites } from '../contexts/FavouritesContext';
 import { Character } from '../types'; 
+import { genderFontColor } from '../utils/utils'; 
 
 const Favourites: React.FC = () => {
   const { favourites, removeFromFavourites } = useFavourites();
@@ -16,7 +17,7 @@ const Favourites: React.FC = () => {
                 <span className="character-name">{character.name}</span> 
                 <div className="character-attributes">
                   <span className="character-attribute">{character.homeworld}</span>
-                  <span className="character-attribute">{character.gender}</span>
+                  <span className="character-attribute" style={genderFontColor(character.gender || '')}>{character.gender}</span>
                   <span className="character-attribute">{character.height}cm</span>
                 </div>
               </div>
