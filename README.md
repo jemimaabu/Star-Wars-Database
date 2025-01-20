@@ -1,4 +1,4 @@
-# Allica Star Wars
+# Star Wars Database
 
 This project is a Star Wars character finder application using the [swapi.dev API](https://swapi.dev/) and React (with TypeScript). It allows you to view characters from the Star Wars universe, search for specific characters, view details about them, and add them to a favourites list.
 
